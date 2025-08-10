@@ -61,7 +61,29 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
+				waveform: {
+					DEFAULT: 'hsl(var(--waveform))',
+					active: 'hsl(var(--waveform-active))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-security': 'var(--gradient-security)',
+				'gradient-danger': 'var(--gradient-danger)',
+				'gradient-success': 'var(--gradient-success)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'card': 'var(--shadow-card)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +106,40 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'recording': {
+					'0%, 100%': { 
+						transform: 'scale(1)', 
+						opacity: '1' 
+					},
+					'50%': { 
+						transform: 'scale(1.1)', 
+						opacity: '0.8' 
+					}
+				},
+				'waveform': {
+					'0%, 100%': { 
+						height: '20%' 
+					},
+					'50%': { 
+						height: '100%' 
+					}
+				},
+				'pulse-custom': {
+					'0%, 100%': { 
+						opacity: '1' 
+					},
+					'50%': { 
+						opacity: '0.5' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'recording': 'recording 1.5s ease-in-out infinite',
+				'waveform': 'waveform 0.8s ease-in-out infinite',
+				'pulse-custom': 'pulse-custom 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
 			}
 		}
 	},
